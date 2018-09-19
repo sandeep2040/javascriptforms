@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ </head>
+<body>
+<form>  
+<input type="date" id="cal">
+<input type="button" onclick="calculateage()" value="submit">
+<p id="demo"></p>    
+    </form>  
+    </body>
+    <script>
+      function calculateage(){
+          var dd1=document.getElementById("cal").value;
+          var birthdate=new Date(dd1);
+          var curr= new Date();
+          var diff=curr-birthdate;
+          var age=Math.floor(diff/(1000*60*60*24*365.25));
+          document.getElementById("demo").innerHTML = age;
+          
+      }
+
+    </script>
+</html>
